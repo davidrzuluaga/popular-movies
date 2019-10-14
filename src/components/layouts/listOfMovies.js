@@ -28,7 +28,7 @@ const ListOfMovies = props => {
   }
 
   return (
-    <>
+    <div className="welcome">
       <div className="banner">
         <img src="https://peliculas-favoritas.s3.amazonaws.com/popcorn.png" />
         <h2>{title}</h2>
@@ -44,7 +44,7 @@ const ListOfMovies = props => {
         {loading ? (
           <p>Cargando</p>
         ) : (
-          <div className="top20">
+          <div className="list">
             {sourceOfMovies().map(movie => (
               <MovieCard
                 movie={movie}
@@ -57,7 +57,7 @@ const ListOfMovies = props => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

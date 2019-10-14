@@ -16,6 +16,7 @@
       left: 50px;
     }
   }
+
   .main {
     .search {
       margin: 0 auto;
@@ -44,11 +45,34 @@
         }
       }
     }
-    .top20 {
+    .list {
       background-color: rgb(177, 177, 177);
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  @media only screen and (max-width: 936px) {
+    padding: 50px 0 0 0;
+    .main {
+      .list {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+  @media only screen and (max-width: 634px) {
+    .main {
+      .list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  @media only screen and (max-width: 390px) {
+    padding: 70px 0 0 0;
+    .main {
+      .list {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

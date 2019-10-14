@@ -26,13 +26,11 @@ const Welcome = props => {
   }
 
   return (
-    <div className="welcome">
-      <ListOfMovies
-        movies={theTop20Movies}
-        loading={loading}
-        title={'Top Movies'}
-      />
-    </div>
+    <ListOfMovies
+      movies={theTop20Movies}
+      loading={loading}
+      title={'Top Movies'}
+    />
   );
 };
 

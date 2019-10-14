@@ -1,7 +1,7 @@
 .card {
   position: relative;
   background-color: bisque;
-  width: 200px;
+  width: 230px;
   border-radius: 10px;
   margin: 5px auto;
   .text {
@@ -40,13 +40,20 @@
     display: block;
   }
   .image {
-    width: 200px;
-    height: 300px;
+    width: 230px;
+    height: 340px;
     background-size: cover !important;
   }
   p.movietitle {
     font-size: 19px;
     cursor: pointer;
     text-align: center;
+  }
+  @media only screen and (max-width: 1170px) {
+    width: 180px;
+    .image {
+      width: 180px;
+      height: 260px;
+    }
   }
 }
