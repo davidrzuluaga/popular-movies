@@ -7,13 +7,18 @@ const MovieCard = props => {
   function isFavorite(movie) {
     return props.favorites.filter(fav => fav.id === movie.id).length;
   }
+  function overviewSizeAccordingToWindow() {
+    return window.innerWidth <= 1170 ? 100 : 230;
+  }
   return (
     <div className="card">
       <div className="text">
         <p>
           {movie.overview
-            ? `${movie.overview.substring(0, 230)}${
-                movie.overview.length > 230 ? '...' : ''
+            ? `${movie.overview.substring(0, overviewSizeAccordingToWindow())}${
+                movie.overview.length > overviewSizeAccordingToWindow()
+                  ? '...'
+                  : ''
               }`
             : ''}
         </p>

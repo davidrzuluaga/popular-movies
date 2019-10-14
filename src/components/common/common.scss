@@ -8,7 +8,7 @@
     display: none;
     position: absolute;
     background-color: rgba(255, 228, 196, 0.596);
-    height: 280px;
+    height: 340px;
     padding: 10px;
     overflow: hidden;
     .options {
@@ -51,6 +51,9 @@
   }
   @media only screen and (max-width: 1170px) {
     width: 180px;
+    .text {
+      height: 240px;
+    }
     .image {
       width: 180px;
       height: 260px;
