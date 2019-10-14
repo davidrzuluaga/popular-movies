@@ -1,0 +1,59 @@
+.MovieDetail {
+  min-height: 120vh;
+  background-color: rgb(43, 43, 43);
+  padding: 50px;
+  h2 {
+    margin: 0;
+  }
+  .banner {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: rgb(165, 165, 165);
+    padding: 20px;
+    h2 {
+      font-size: 40px;
+    }
+    img {
+      margin: auto;
+      width: 50px;
+      left: 50px;
+    }
+    p.tagline {
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+  .detail {
+    background-color: rgb(226, 226, 226);
+    height: 325px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    .poster {
+      background-size: cover !important;
+      background-position: center !important;
+      width: 100%;
+      height: 325px;
+    }
+    .movieBackground {
+      background-size: cover !important;
+      width: 100%;
+      height: 325px;
+      background-position: center !important;
+    }
+  }
+  .summary {
+    min-height: 50vh;
+    background-color: rgb(226, 226, 226);
+    padding: 20px 200px;
+    h3,
+    h4 {
+      margin: 0;
+    }
+    p {
+      margin: 5px;
+    }
+    .fact * {
+      display: inline-block;
+    }
+  }
+}

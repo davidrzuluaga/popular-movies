@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 const MovieCard = props => {
   const movie = props.movie;
@@ -13,7 +14,9 @@ const MovieCard = props => {
             : ''}
         </p>
         <div className="options">
-          <button>Ver más</button>
+          <button onClick={() => props.history.push(`/pelicula/${movie.id}`)}>
+            Ver más
+          </button>
           <div className="like">
             <i className="material-icons">favorite_border</i>
             {/* <i className="material-icons">favorite</i> */}
@@ -31,4 +34,4 @@ const MovieCard = props => {
   );
 };
 
-export default MovieCard;
+export default withRouter(MovieCard);

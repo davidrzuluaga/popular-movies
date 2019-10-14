@@ -34,7 +34,7 @@ const Welcome = props => {
         <div className="search">
           <input
             type="text"
-            placeholder="Busca entre las 20..."
+            placeholder="Busca en esta lista..."
             name="search"
           />
         </div>
