@@ -22,9 +22,15 @@
       background-color: rgb(110, 110, 110);
       padding: 10px;
       input {
-        height: 25px;
+        background: rgba(255, 255, 255, 0);
+        height: 35px;
+        font-size: 30px;
         border: 0px solid #cacaca;
         border-radius: 5px;
+        color: rgb(255, 255, 255);
+        &::placeholder {
+          color: rgb(170, 170, 170);
+        }
       }
       button {
         background-color: rgb(150, 150, 150);
@@ -40,7 +46,9 @@
     }
     .top20 {
       background-color: rgb(177, 177, 177);
-      height: 100vh;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
 }

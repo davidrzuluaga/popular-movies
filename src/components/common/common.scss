@@ -1,0 +1,52 @@
+.card {
+  position: relative;
+  background-color: bisque;
+  width: 200px;
+  border-radius: 10px;
+  margin: 5px auto;
+  .text {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 228, 196, 0.596);
+    height: 280px;
+    padding: 10px;
+    overflow: hidden;
+    .options {
+      display: grid;
+      grid-template-columns: 65% 30%;
+      button {
+        background-color: rgb(228, 228, 228);
+        color: rgb(95, 95, 95);
+        font-size: 16px;
+        border: 0px solid #cacaca;
+        &:hover,
+        &.current {
+          background-color: #cacaca;
+          color: rgb(7, 7, 7);
+        }
+      }
+      .like {
+        display: inline-block;
+        cursor: pointer;
+        i {
+          margin: 0 auto;
+          font-size: 30px;
+          color: rgb(163, 0, 0);
+        }
+      }
+    }
+  }
+  &:hover .text {
+    display: block;
+  }
+  .image {
+    width: 200px;
+    height: 300px;
+    background-size: cover !important;
+  }
+  p.movietitle {
+    font-size: 19px;
+    cursor: pointer;
+    text-align: center;
+  }
+}

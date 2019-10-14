@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import MovieCard from '../common/MovieCard';
 
 const Welcome = props => {
   const [theTop20Movies, setTheTop20Movies] = useState([]);
@@ -31,17 +32,18 @@ const Welcome = props => {
       </div>
       <div className="main">
         <div className="search">
-          <form>
-            <input type="text" placeholder="Search.." name="search" />
-            <button type="submit">Buscar</button>
-          </form>
+          <input
+            type="text"
+            placeholder="Busca entre las 20..."
+            name="search"
+          />
         </div>
         {loading ? (
           <p>Cargando</p>
         ) : (
           <div className="top20">
             {theTop20Movies.map(movie => (
-              <p>{movie.title}</p>
+              <MovieCard movie={movie} />
             ))}
           </div>
         )}
