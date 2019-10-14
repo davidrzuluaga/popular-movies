@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import MovieCritics from './critics';
 
 const MovieDetail = props => {
   const { params } = props.match;
@@ -90,6 +91,7 @@ const MovieDetail = props => {
                   ))}
               </div>
             </div>
+            <MovieCritics params={params} />
           </div>
         </>
       )}

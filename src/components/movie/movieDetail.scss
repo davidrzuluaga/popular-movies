@@ -56,6 +56,22 @@
       display: inline-block;
     }
   }
+  .critics {
+    padding: 20px 0;
+    h3 {
+      padding: 0 0 20px 0;
+    }
+    p {
+      margin: 0;
+      font-size: 14px;
+      padding: 6px 0;
+      &.showmore {
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 12px;
+      }
+    }
+  }
   @media only screen and (max-width: 936px) {
     padding: 50px 0 0 0;
 
