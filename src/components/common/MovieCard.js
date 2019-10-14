@@ -3,6 +3,10 @@ import { withRouter } from 'react-router-dom';
 
 const MovieCard = props => {
   const movie = props.movie;
+
+  function isFavorite(movie) {
+    return props.favorites.filter(fav => fav.id === movie.id).length;
+  }
   return (
     <div className="card">
       <div className="text">
@@ -18,8 +22,21 @@ const MovieCard = props => {
             Ver más
           </button>
           <div className="like">
-            <i className="material-icons">favorite_border</i>
-            {/* <i className="material-icons">favorite</i> */}
+            {isFavorite(movie) ? (
+              <i
+                className="material-icons"
+                onClick={() => props.deleteFavorite(movie)}
+              >
+                favorite
+              </i>
+            ) : (
+              <i
+                className="material-icons"
+                onClick={() => props.createFavorite(movie)}
+              >
+                favorite_border
+              </i>
+            )}
           </div>
         </div>
       </div>

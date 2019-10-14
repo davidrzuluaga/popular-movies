@@ -5,10 +5,25 @@ import MovieCard from '../common/MovieCard';
 const Welcome = props => {
   const [theTop20Movies, setTheTop20Movies] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     getTheTop20Movies();
+    let getFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    setFavorites(getFavorites);
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
+
+  function createFavorite(movie) {
+    setFavorites([...favorites, movie]);
+  }
+
+  function deleteFavorite(movie) {
+    setFavorites(favorites.filter(fav => fav.id !== movie.id));
+  }
 
   function getTheTop20Movies() {
     axios({
@@ -43,7 +58,13 @@ const Welcome = props => {
         ) : (
           <div className="top20">
             {theTop20Movies.map(movie => (
-              <MovieCard movie={movie} />
+              <MovieCard
+                movie={movie}
+                key={movie.id}
+                favorites={favorites}
+                createFavorite={createFavorite}
+                deleteFavorite={deleteFavorite}
+              />
             ))}
           </div>
         )}
