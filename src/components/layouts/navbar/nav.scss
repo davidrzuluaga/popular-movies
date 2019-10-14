@@ -1,0 +1,24 @@
+.navbar {
+  background-color: rgb(218, 218, 218);
+  padding: 5px 15px;
+  width: 100%;
+  position: fixed;
+  h1 {
+    display: inline-block;
+    margin: 0 40px;
+    font-size: 20px;
+  }
+  .buttons {
+    display: inline-block;
+    button {
+      background-color: rgb(192, 192, 192);
+      color: black;
+      border: 1px solid #707070;
+      &:hover,
+      &.current {
+        background-color: #707070;
+        color: white;
+      }
+    }
+  }
+}

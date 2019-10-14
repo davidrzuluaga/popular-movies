@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border-radius: 5px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+@import '../components/layouts/navbar/nav.scss';
+@import '../components/welcome/welcome.scss';

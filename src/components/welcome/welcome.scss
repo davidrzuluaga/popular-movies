@@ -1,0 +1,46 @@
+.welcome {
+  min-height: 120vh;
+  background-color: rgb(43, 43, 43);
+  padding: 50px;
+  .banner {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: rgb(165, 165, 165);
+    padding: 20px;
+    h2 {
+      font-size: 40px;
+    }
+    img {
+      margin: auto;
+      width: 100px;
+      left: 50px;
+    }
+  }
+  .main {
+    .search {
+      margin: 0 auto;
+      background-color: rgb(110, 110, 110);
+      padding: 10px;
+      input {
+        height: 25px;
+        border: 0px solid #cacaca;
+        border-radius: 5px;
+      }
+      button {
+        background-color: rgb(150, 150, 150);
+        color: rgb(206, 206, 206);
+        font-size: 16px;
+        border: 0px solid #cacaca;
+        &:hover,
+        &.current {
+          background-color: #cacaca;
+          color: rgb(7, 7, 7);
+        }
+      }
+    }
+    .top20 {
+      background-color: rgb(177, 177, 177);
+      height: 100vh;
+    }
+  }
+}
