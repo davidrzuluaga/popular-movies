@@ -6,8 +6,10 @@ const Navbar = props => {
     <div className="navbar">
       <h1>Welcome to the Popular Movies List</h1>
       <div className="buttons">
-        <button onClick={() => props.history.push(`/`)}>Top 20</button>
-        <button>My favorites</button>
+        <button onClick={() => props.history.push(`/`)}>Top Movies</button>
+        <button onClick={() => props.history.push(`/favorites`)}>
+          My favorites
+        </button>
       </div>
     </div>
   );

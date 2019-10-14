@@ -1,29 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MovieCard from '../common/MovieCard';
+import ListOfMovies from '../layouts/listOfMovies';
 
 const Welcome = props => {
   const [theTop20Movies, setTheTop20Movies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     getTheTop20Movies();
-    let getFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    setFavorites(getFavorites);
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-  }, [favorites]);
-
-  function createFavorite(movie) {
-    setFavorites([...favorites, movie]);
-  }
-
-  function deleteFavorite(movie) {
-    setFavorites(favorites.filter(fav => fav.id !== movie.id));
-  }
 
   function getTheTop20Movies() {
     axios({
@@ -41,34 +27,11 @@ const Welcome = props => {
 
   return (
     <div className="welcome">
-      <div className="banner">
-        <img src="https://peliculas-favoritas.s3.amazonaws.com/popcorn.png" />
-        <h2>Monthly Top 20</h2>
-      </div>
-      <div className="main">
-        <div className="search">
-          <input
-            type="text"
-            placeholder="Search on the list..."
-            name="search"
-          />
-        </div>
-        {loading ? (
-          <p>Cargando</p>
-        ) : (
-          <div className="top20">
-            {theTop20Movies.map(movie => (
-              <MovieCard
-                movie={movie}
-                key={movie.id}
-                favorites={favorites}
-                createFavorite={createFavorite}
-                deleteFavorite={deleteFavorite}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+      <ListOfMovies
+        movies={theTop20Movies}
+        loading={loading}
+        title={'Top Movies'}
+      />
     </div>
   );
 };

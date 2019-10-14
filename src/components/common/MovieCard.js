@@ -18,7 +18,7 @@ const MovieCard = props => {
             : ''}
         </p>
         <div className="options">
-          <button onClick={() => props.history.push(`/pelicula/${movie.id}`)}>
+          <button onClick={() => props.history.push(`/movie/${movie.id}`)}>
             Ver más
           </button>
           <div className="like">
@@ -46,7 +46,12 @@ const MovieCard = props => {
           background: `url(https://image.tmdb.org/t/p/original/${movie.poster_path})`
         }}
       ></div>
-      <p className="movietitle">{movie.title}</p>
+      <p
+        className="movietitle"
+        onClick={() => props.history.push(`/movie/${movie.id}`)}
+      >
+        {movie.title}
+      </p>
     </div>
   );
 };
