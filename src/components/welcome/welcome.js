@@ -28,13 +28,13 @@ const Welcome = props => {
     <div className="welcome">
       <div className="banner">
         <img src="https://peliculas-favoritas.s3.amazonaws.com/popcorn.png" />
-        <h2>Las 20 mas vistas este mes</h2>
+        <h2>Monthly Top 20</h2>
       </div>
       <div className="main">
         <div className="search">
           <input
             type="text"
-            placeholder="Busca en esta lista..."
+            placeholder="Search on the list..."
             name="search"
           />
         </div>
