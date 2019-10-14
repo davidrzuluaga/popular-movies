@@ -34,13 +34,6 @@ const ListOfMovies = props => {
         <h2>{title}</h2>
       </div>
       <div className="main">
-        <div className="search">
-          <input
-            type="text"
-            placeholder="Search on the list..."
-            name="search"
-          />
-        </div>
         {loading ? (
           <p>Cargando</p>
         ) : (
