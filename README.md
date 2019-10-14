@@ -2,7 +2,7 @@
 
 feel free to clone and fork this repo 
 
->  Functional version of this repo https://popular-movies.herokuapp.com/
+>  Functional version of this repo https://popular-movies-drz.herokuapp.com/
 
 ## Steps
 clone this repo locally using 
