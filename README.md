@@ -8,9 +8,9 @@ feel free to clone and fork this repo
 clone this repo locally using 
 ```
 git clone https://github.com/davidrzuluaga/popular-movies
-cd react-blog
+cd popular-movies
 npm install 
 npm start
 ```
 ## Notes
-* The proyect's source is obtained from themoviedb.org
+* The project's source is obtained from themoviedb.org
