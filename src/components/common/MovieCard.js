@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
 const MovieCard = props => {
   const movie = props.movie;
@@ -9,6 +8,9 @@ const MovieCard = props => {
   }
   function overviewSizeAccordingToWindow() {
     return window.innerWidth <= 1170 ? 100 : 230;
+  }
+  function redirect() {
+    props?.history?.push(`/movie/${movie.id}`)
   }
   return (
     <div className="card">
@@ -23,7 +25,7 @@ const MovieCard = props => {
             : ''}
         </p>
         <div className="options">
-          <button onClick={() => props.history.push(`/movie/${movie.id}`)}>
+          <button onClick={redirect}>
             Ver más
           </button>
           <div className="like">
@@ -61,4 +63,4 @@ const MovieCard = props => {
   );
 };
 
-export default withRouter(MovieCard);
+export default MovieCard;
