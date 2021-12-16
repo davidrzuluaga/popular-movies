@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const MovieCard = props => {
   const movie = props.movie;
@@ -23,12 +23,15 @@ const MovieCard = props => {
             : ''}
         </p>
         <div className="options">
-          <button onClick={() => props.history.push(`/movie/${movie.id}`)}>
-            Ver más
-          </button>
+          <Link to={`/movie/${movie.id}`}>
+            <button>
+              Ver más
+            </button>
+          </Link>
           <div className="like">
             {isFavorite(movie) ? (
               <i
+                id="deleteFavorite"
                 className="material-icons"
                 onClick={() => props.deleteFavorite(movie)}
               >
@@ -36,6 +39,7 @@ const MovieCard = props => {
               </i>
             ) : (
               <i
+                id="createFavorite"
                 className="material-icons"
                 onClick={() => props.createFavorite(movie)}
               >
@@ -61,4 +65,4 @@ const MovieCard = props => {
   );
 };
 
-export default withRouter(MovieCard);
+export default MovieCard

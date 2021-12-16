@@ -46,7 +46,7 @@ const MovieDetail = props => {
             ></div>
           </div>
           <div className="banner">
-            <img src="https://peliculas-favoritas.s3.amazonaws.com/popcorn.png" />
+          <img src="https://comunidadmde.s3.amazonaws.com/resources/camera.png" />
             <h2>{theMovie.title}</h2>
             <p></p>
             <p className="tagline">{theMovie.tagline}</p>
