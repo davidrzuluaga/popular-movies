@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import Navbar from '../../components/layouts/navbar/Navbar';
 import RouterMock from '../__mocks__/RouterMock';
 
-xdescribe('<Navbar />', () => {
+describe('<Navbar />', () => {
     const navbar = mount(
         <RouterMock>
             <Navbar />

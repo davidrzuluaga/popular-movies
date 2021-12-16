@@ -1,7 +1,7 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import RouterMock from '../__mocks__/RouterMock';
-import MovieCard from '../../components/common/MovieCard';
+import MovieCard, { isFavorite } from '../../components/common/MovieCard';
 import { oneMovie, favorites } from '../__mocks__/Movies'
 
 describe('<MovieCard />', () => {
@@ -21,8 +21,8 @@ describe('<MovieCard />', () => {
     })
 
     test('Test is Favorite', ()=> {
-        const isFavorite = movieCard.instance()
-        console.log(isFavorite);
+        expect(isFavorite(oneMovie, favorites)).toEqual(0)
+        expect(isFavorite(favorites[0], favorites)).toEqual(1)
     })
 
     test('Test button favorite', ()=> {

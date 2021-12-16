@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-xdescribe('Call API Movies', () => {
+describe('Call API Movies', () => {
     test('Get 20 Movies', () => {
         axios({
             method: 'GET',

@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+function isFavorite(movie, favorites) {
+  return favorites.filter(fav => fav.id === movie.id).length;
+}
+
 const MovieCard = props => {
   const movie = props.movie;
 
-  function isFavorite(movie) {
-    return props.favorites.filter(fav => fav.id === movie.id).length;
-  }
   function overviewSizeAccordingToWindow() {
     return window.innerWidth <= 1170 ? 100 : 230;
   }
+
   return (
     <div className="card">
       <div className="text">
@@ -29,7 +31,7 @@ const MovieCard = props => {
             </button>
           </Link>
           <div className="like">
-            {isFavorite(movie) ? (
+            {isFavorite(movie, props.favorites) ? (
               <i
                 id="deleteFavorite"
                 className="material-icons"
@@ -65,4 +67,4 @@ const MovieCard = props => {
   );
 };
 
-export default MovieCard
+export { MovieCard as default, isFavorite }
