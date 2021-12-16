@@ -1,18 +1,22 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = props => {
   return (
     <div className="navbar">
       <h1>Welcome to the Popular Movies List</h1>
       <div className="buttons">
-        <button onClick={() => props.history.push(`/`)}>Top Movies</button>
-        <button onClick={() => props.history.push(`/favorites`)}>
-          My favorites
-        </button>
+        <Link to={`/`}>
+          <button>Top Movies</button>
+        </Link>
+        <Link to={`/favorites`}>
+          <button>
+            My favorites
+          </button>
+        </Link>
       </div>
     </div>
   );
 };
 
-export default withRouter(Navbar);
+export default Navbar;

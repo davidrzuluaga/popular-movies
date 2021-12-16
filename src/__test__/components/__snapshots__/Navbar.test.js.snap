@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Snapshot Comprobar la UI del componente Navbar 1`] = `
+<div
+  className="navbar"
+>
+  <h1>
+    Welcome to the Popular Movies List
+  </h1>
+  <div
+    className="buttons"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Top Movies
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      My favorites
+    </button>
+  </div>
+</div>
+`;
