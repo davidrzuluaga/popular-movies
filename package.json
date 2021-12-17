@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://davidrzuluaga.com/popular-movies",
   "dependencies": {
+    "@sentry/react": "^6.16.1",
+    "@sentry/tracing": "^6.16.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -15,6 +17,10 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "5.0.0"
   },
+  "engines": {
+    "node": "14.16.1"
+  },
+  "engineStrict": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
