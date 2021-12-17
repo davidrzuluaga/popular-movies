@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
+import * as Sentry from "@sentry/react";
+import { Integrations } from "@sentry/tracing";
 
 if (window.location.hostname !== 'localhost') {
   Sentry.init({
