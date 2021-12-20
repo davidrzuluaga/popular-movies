@@ -2,7 +2,6 @@
   "name": "peliculas",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://davidrzuluaga.com/popular-movies",
   "dependencies": {
     "@babel/core": "^7.13.0",
     "@sentry/react": "^6.16.1",
