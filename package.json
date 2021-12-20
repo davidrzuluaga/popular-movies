@@ -2,7 +2,6 @@
   "name": "peliculas",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://davidrzuluaga.com/popular-movies",
   "dependencies": {
     "@babel/core": "^7.13.0",
     "@sentry/react": "^6.16.1",
@@ -11,7 +10,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.21.2",
-    "node-sass": "^4.14.1",
+    "sass": "~1.43.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
